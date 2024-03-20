@@ -1,0 +1,32 @@
+.btn {
+    cursor: pointer;
+    padding: 10px;
+    background-color: rgba(248, 248, 248, 0.991);
+    border-radius: 8%;
+   border: 1px solid;
+}
+
+.btn:hover {
+background-color: rgb(196, 195, 193);
+}
+
+.btn:active {
+    background-color: rgb(37, 111, 239);
+}
+
+.btnReset:hover {
+background-color: rgb(127, 158, 249);
+}
+
+.btnReset {
+    cursor: pointer;
+        padding: 10px;
+        background-color: rgba(248, 248, 248, 0.991);
+        border-radius: 8%;
+        border: 1px solid;
+}
+
+.btns {
+    display: flex;
+    gap: 10px;
+}
