@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Description from './components/Description/Description'
 import Feedback from './components/Feedback/Feedback'
 import Options from './components/Options/Options'
+import Notification from './components/Notification/Notification';
+
 
 function App() {
   const initializeFeedbackTypes = () => {
@@ -44,9 +46,13 @@ function App() {
 
   return (
     <div>
-      <Description/>
+      <Description />
+      {!hasFeedback && <Notification />}
       <Options updateFeedback={updateFeedback} resetFeedback={resetFeedback} hasFeedback={hasFeedback} />
-      <Feedback feedbackTypes={feedbackTypes} totalFeedback={totalFeedback} positivePercentage={positivePercentage} />
+      {totalFeedback > 0 &&
+
+        <Feedback feedbackTypes={feedbackTypes} totalFeedback={totalFeedback} positivePercentage={positivePercentage} />
+      }
     </div>
   );
 }
